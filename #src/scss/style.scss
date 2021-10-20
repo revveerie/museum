@@ -39,6 +39,13 @@
 
 //-----------------------------------------------------
 //GENERAL STYLES
+
+body {
+	&._lock {
+		overflow: hidden;
+	}
+}
+
 .wrapper {
 	width: 100%;
 	min-height: 100%;
@@ -48,18 +55,9 @@
 }
 
 .container {
-	max-width: 1440px;
+	max-width: 1470px;
+	padding: 0 15px;
 	margin: 0 auto;
-	width: 100%;
-}
-
-.ibg {
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	img {
-		display: none;
-	}
 }
 //GENERAL STYLES
 //-----------------------------------------------------
@@ -72,6 +70,15 @@
 //STYLES
 //-----------------------------------------------------
 
+.link {
+	transition: 400ms;
+	&:hover {
+		color: rgba(157, 134, 101, 1);
+	}
+	&:visited {
+		color: rgba(126, 108, 81, 1);
+	}
+}
 
 //-----------------------------------------------------
 //MAIN BLOCK
