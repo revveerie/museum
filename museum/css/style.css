@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Forum-Regular";
+  font-family: "Forum";
   font-display: swap;
   src: url("../fonts/Forum-Regular.woff") format("woff"), url("../fonts/Forum-Regular.woff2") format("woff2");
   font-weight: 400;
@@ -7,47 +7,39 @@
 }
 
 @font-face {
-  font-family: "Roboto-Black";
+  font-family: "Roboto";
   font-display: swap;
   src: url("../fonts/Roboto-Black.woff") format("woff"), url("../fonts/Roboto-Black.woff2") format("woff2");
-  font-weight: 400;
+  font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Roboto-Bold";
+  font-family: "Roboto";
   font-display: swap;
   src: url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.woff2") format("woff2");
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Roboto-Italic";
-  font-display: swap;
-  src: url("../fonts/Roboto-Italic.woff") format("woff"), url("../fonts/Roboto-Italic.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Roboto-Light";
+  font-family: "Roboto";
   font-display: swap;
   src: url("../fonts/Roboto-Light.woff") format("woff"), url("../fonts/Roboto-Light.woff2") format("woff2");
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Roboto-Medium";
+  font-family: "Roboto";
   font-display: swap;
   src: url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.woff2") format("woff2");
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Roboto-Regular";
+  font-family: "Roboto";
   font-display: swap;
   src: url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.woff2") format("woff2");
   font-weight: 400;
@@ -55,10 +47,10 @@
 }
 
 @font-face {
-  font-family: "Roboto-Thin";
+  font-family: "Roboto";
   font-display: swap;
   src: url("../fonts/Roboto-Thin.woff") format("woff"), url("../fonts/Roboto-Thin.woff2") format("woff2");
-  font-weight: 400;
+  font-weight: 100;
   font-style: normal;
 }
 
@@ -283,6 +275,82 @@ body._lock {
   grid-column: 2/3;
 }
 
+.welcome {
+  background: #030303;
+}
+
+.welcome__title {
+  padding: 0 0 25px 0;
+  max-width: 593px;
+}
+
+.welcome__title-text {
+  font-family: "Forum", serif;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90px;
+  letter-spacing: 5px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.welcome__subtitle {
+  padding: 0 0 75px 0;
+}
+
+.welcome__subtitle-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 33px;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.welcome__discover-link {
+  padding: 32px 64px;
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 26px;
+  letter-spacing: 2px;
+  text-align: center;
+  background: #710707;
+  color: #fff;
+  border-radius: 10px;
+  max-width: 360px;
+  -webkit-transition: 400ms;
+  -o-transition: 400ms;
+  transition: 400ms;
+}
+
+.welcome__discover-link:hover {
+  background: #9d8665;
+}
+
+.swiper-image {
+  position: relative;
+}
+
+.swiper-image img {
+  width: 100%;
+}
+
+.swiper-image::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#000000), color-stop(16.19%, rgba(0, 0, 0, 0.5)), color-stop(30.73%, rgba(0, 0, 0, 0)));
+  background: -o-linear-gradient(left, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%);
+  background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%);
+}
+
 .link {
   -webkit-transition: 400ms;
   -o-transition: 400ms;
@@ -370,6 +438,7 @@ body._lock {
     -webkit-transition: 400ms;
     -o-transition: 400ms;
     transition: 400ms;
+    z-index: 5;
   }
 
   .header__menu-body._menu-active {
