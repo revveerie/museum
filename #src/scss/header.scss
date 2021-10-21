@@ -83,12 +83,22 @@
             left: 0;
             top: 99%;
             background-color: $dark;
-            overflow: auto;
-            transform: translate(-100%, 0);
+            transform: translate(-200%, 0);
             transition: 400ms;
             z-index: 5;
             &._menu-active {
                 transform: translate(0, 0);
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                left: 99%;
+                height: 100%;
+                width: 100%;
+                background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%);
+                @media(max-width: $md7) {
+                    display: none;
+                }
             }
         }
         @media (max-width: $md7) {
