@@ -34,3 +34,5 @@ swiper.on('slideChangeTransitionStart', function () {
     let child = parent.querySelector('.slide-number').innerHTML;
     document.querySelector('.welcome__slider-current').innerHTML = child;
 });
+
+
