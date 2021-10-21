@@ -1,0 +1,188 @@
+.visiting {
+    background: #fff;
+    &__title {
+    }
+
+    &__title-text {
+    }
+
+    &__row {
+        display: flex;
+        @media (max-width: $md5) {
+            flex-direction: column;
+        }
+    }
+
+    &__column {
+        flex: 0 1 33.333%;
+        &:not(:last-child) {
+            margin: 0 60px 0 0;
+        }
+        @media (max-width: $md5) {
+            display: flex;
+            &:not(:last-child) {
+                margin: 0 0 60px 0;
+            }
+        }
+        @media (max-width: 610px) {
+            flex-direction: column;
+            &:not(:last-child) {
+                margin: 0 0 40px 0;
+            }
+        }
+    }
+
+    &__column-item {
+        &:not(:last-child) {
+            margin: 0 0 75px 0;
+        }
+        @media (max-width: $md5) {
+            &:not(:last-child) {
+                margin: 0 108px;
+            }
+            margin: 0 108px 0 0;
+        }
+        @media (max-width: $md7) {
+            &:not(:last-child) {
+                margin: 0 56px;
+            }
+            margin: 0 56px 0 0;
+        }
+        @media (max-width: 610px) {
+            &:not(:last-child) {
+                margin: 0 50px 40px;
+            }
+            margin: 0 50px;
+        }
+    }
+
+    &__column-link {
+        color: #000;
+        &:hover {
+            img {
+                transform: scale(1.2);
+            }
+            .visiting__column-title-text {
+                color: rgba(157, 134, 101, 1);
+            }
+        }
+    }
+
+    &__column-image {
+        margin: 0 0 25px 0;
+        overflow: hidden;
+        img {
+            transition: 400ms;
+            width: 100%;
+        }
+    }
+
+    &__column-title {
+        position: relative;
+        padding: 0 0 10px 0;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 2px;
+            background: $red;
+            @media (max-width: $md5) {
+                width: 150px;
+            }
+        }
+        @media (max-width: 1360px) {
+            width: 50px;
+        }
+        @media (max-width: $md5) {
+            width: 100%;
+        }
+        @media (max-width: 935px) {
+            width: 50px;
+        }
+        @media (max-width: $md7) {
+            width: 100%;
+        }
+        @media (max-width: 736px) {
+            width: 50px;
+        }
+        @media (max-width: 610px) {
+            width: 100%;
+        }
+    }
+
+    &__column-title-text {
+        padding: 0 0 20px 0;
+        font-family: 'Forum', serif;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 35px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        transition: 400ms;
+        @media (max-width: $md5) {
+            font-size: 24px;
+            letter-spacing: 3px;
+            line-height: 30.91px;
+        }
+        @media (max-width: $md7) {
+            font-size: 22px;
+            line-height: 24px;
+        }
+    }
+
+    &__column-360 {
+        margin: 0 0 12px 0;
+        @media (max-width: $md5) {
+            margin: 0 0 10px 0;
+        }
+    }
+
+    &__column-360-text {
+        font-family: 'Roboto', sans-serif;
+        font-size: 22px;
+        font-weight: 200;
+        line-height: 26px;
+        @media (max-width: $md5) {
+            font-size: 20px;
+            line-height: 23.44px;
+        }
+        @media (max-width: $md7) {
+            font-size: 18px;
+            line-height: 21px;
+        }
+    }
+
+    &__column-google {
+    }
+
+    &__column-google-text {
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        font-weight: 200;
+        line-height: 21px;
+        @media (max-width: $md5) {
+            font-size: 16px;
+            line-height: 18.75px;
+        }
+        @media (max-width: $md7) {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+}
+.section {
+
+    &__title {
+
+        &_light {
+        }
+    }
+
+    &__title-text {
+
+        &_light {
+        }
+    }
+}
+.container {
+}

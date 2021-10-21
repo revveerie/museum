@@ -40,6 +40,10 @@
 //-----------------------------------------------------
 //GENERAL STYLES
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	&._lock {
 		overflow: hidden;
@@ -68,6 +72,7 @@ body {
 //STYLES
 @import "header";
 @import "welcome";
+@import "visiting";
 @import "footer";
 //STYLES
 //-----------------------------------------------------
@@ -89,6 +94,73 @@ body {
 		width: 100%;
 		height: 100%;
 	}
+}
+
+.section {
+	padding: 75px 0;
+	@media (max-width: $md5) {
+		padding: 60px 0;
+	}
+	@media (max-width: $md7) {
+		padding: 40px 0;
+	}
+}
+
+.section__title {
+	position: relative;
+	padding: 0 0 75px 0;
+	&::after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 3px;
+		background: $red;
+	}
+	@media (max-width: $md5) {
+		padding: 0 0 60px 0;
+	}
+	@media (max-width: $md7) {
+		padding: 0 0 40px 0;
+	}
+}
+
+.section__title-text {
+	font-family: 'Forum', serif;
+	font-size: 80px;
+	font-weight: 400;
+	line-height: 90px;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	padding: 0 0 25px 0;
+	@media (max-width: $md5) {
+		font-size: 50px;
+		line-height: 75px;
+		padding: 0 0 20px 0;
+	}
+	@media (max-width: $md7) {
+		font-size: 40px;
+		line-height: 60px;
+	}
+	@media (max-width: 420px) {
+		font-size: 28px;
+		line-height: 40px;
+	}
+}
+
+.section__title_light {
+
+}
+
+.section__title-text_light {
+	color: rgba(157, 134, 101, 1);
+}
+
+.section__title_dark {
+
+}
+
+.section__title-text_dark {
+	color: #fff;
 }
 
 //-----------------------------------------------------

@@ -145,6 +145,10 @@ h6 {
   font-size: inherit;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body._lock {
   overflow: hidden;
 }
@@ -482,6 +486,100 @@ body._lock {
   display: none;
 }
 
+.visiting {
+  background: #fff;
+}
+
+.visiting__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.visiting__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.333%;
+          flex: 0 1 33.333%;
+}
+
+.visiting__column:not(:last-child) {
+  margin: 0 60px 0 0;
+}
+
+.visiting__column-item:not(:last-child) {
+  margin: 0 0 75px 0;
+}
+
+.visiting__column-link {
+  color: #000;
+}
+
+.visiting__column-link:hover img {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.visiting__column-link:hover .visiting__column-title-text {
+  color: #9d8665;
+}
+
+.visiting__column-image {
+  margin: 0 0 25px 0;
+  overflow: hidden;
+}
+
+.visiting__column-image img {
+  -webkit-transition: 400ms;
+  -o-transition: 400ms;
+  transition: 400ms;
+  width: 100%;
+}
+
+.visiting__column-title {
+  position: relative;
+  padding: 0 0 10px 0;
+}
+
+.visiting__column-title::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 2px;
+  background: #710707;
+}
+
+.visiting__column-title-text {
+  padding: 0 0 20px 0;
+  font-family: "Forum", serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 35px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  -webkit-transition: 400ms;
+  -o-transition: 400ms;
+  transition: 400ms;
+}
+
+.visiting__column-360 {
+  margin: 0 0 12px 0;
+}
+
+.visiting__column-360-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  font-weight: 200;
+  line-height: 26px;
+}
+
+.visiting__column-google-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 21px;
+}
+
 .link {
   -webkit-transition: 400ms;
   -o-transition: 400ms;
@@ -504,6 +602,47 @@ body._lock {
 .visiting__iframe-wrapper iframe {
   width: 100%;
   height: 100%;
+}
+
+.section {
+  padding: 75px 0;
+}
+
+.section__title {
+  position: relative;
+  padding: 0 0 75px 0;
+}
+
+.section__title::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #710707;
+}
+
+.section__title-text {
+  font-family: "Forum", serif;
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 90px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  padding: 0 0 25px 0;
+}
+
+.section__title-text_light {
+  color: #9d8665;
+}
+
+.section__title-text_dark {
+  color: #fff;
+}
+
+@media (max-width: 1360px) {
+  .visiting__column-title {
+    width: 50px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -671,11 +810,84 @@ body._lock {
     margin: 0 45px 0 230px;
     font-size: 20px;
   }
+
+  .visiting__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .visiting__column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .visiting__column:not(:last-child) {
+    margin: 0 0 60px 0;
+  }
+
+  .visiting__column-item {
+    margin: 0 108px 0 0;
+  }
+
+  .visiting__column-item:not(:last-child) {
+    margin: 0 108px;
+  }
+
+  .visiting__column-title::after {
+    width: 150px;
+  }
+
+  .visiting__column-title {
+    width: 100%;
+  }
+
+  .visiting__column-title-text {
+    font-size: 24px;
+    letter-spacing: 3px;
+    line-height: 30.91px;
+  }
+
+  .visiting__column-360 {
+    margin: 0 0 10px 0;
+  }
+
+  .visiting__column-360-text {
+    font-size: 20px;
+    line-height: 23.44px;
+  }
+
+  .visiting__column-google-text {
+    font-size: 16px;
+    line-height: 18.75px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section__title {
+    padding: 0 0 60px 0;
+  }
+
+  .section__title-text {
+    font-size: 50px;
+    line-height: 75px;
+    padding: 0 0 20px 0;
+  }
 }
 
 @media (max-width: 1024px) and (max-width: 768px) {
   .header__menu-body::before {
     display: none;
+  }
+}
+
+@media (max-width: 935px) {
+  .visiting__column-title {
+    width: 50px;
   }
 }
 
@@ -781,6 +993,77 @@ body._lock {
   .welcome__slider-numbers {
     margin: 0 45px 0 0;
   }
+
+  .visiting__column-item {
+    margin: 0 56px 0 0;
+  }
+
+  .visiting__column-item:not(:last-child) {
+    margin: 0 56px;
+  }
+
+  .visiting__column-title {
+    width: 100%;
+  }
+
+  .visiting__column-title-text {
+    font-size: 22px;
+    line-height: 24px;
+  }
+
+  .visiting__column-360-text {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .visiting__column-google-text {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+
+  .section__title {
+    padding: 0 0 40px 0;
+  }
+
+  .section__title-text {
+    font-size: 40px;
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 736px) {
+  .visiting__column-title {
+    width: 50px;
+  }
+}
+
+@media (max-width: 610px) {
+  .visiting__column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .visiting__column:not(:last-child) {
+    margin: 0 0 40px 0;
+  }
+
+  .visiting__column-item {
+    margin: 0 50px;
+  }
+
+  .visiting__column-item:not(:last-child) {
+    margin: 0 50px 40px;
+  }
+
+  .visiting__column-title {
+    width: 100%;
+  }
 }
 
 @media (max-width: 420px) {
@@ -860,6 +1143,11 @@ body._lock {
     font-size: 16px;
     margin: 0 25px 0 0;
   }
+
+  .section__title-text {
+    font-size: 28px;
+    line-height: 40px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -887,6 +1175,14 @@ body._lock {
 
 }
 
+ @media (max-width: 1360px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
  @media (max-width: 1024px){
 
 @supports (-webkit-appearance:none){
@@ -903,7 +1199,31 @@ body._lock {
 
 }
 
+ @media (max-width: 935px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
  @media (max-width: 768px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 736px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 610px){
 
 @supports (-webkit-appearance:none){
 
