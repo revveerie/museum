@@ -1,0 +1,274 @@
+.welcome {
+    background: $dark;
+    position: relative;
+    &__title-wrapper {
+        position: absolute;
+        z-index: 4;
+        top: 50%;
+        transform: translate(0, -65%);
+        opacity: 1;
+        visibility: visible;
+        transition: 400ms;
+        &._menu-active {
+            opacity: 0;
+            visibility: hidden;
+        }
+        @media (max-width: $md5) {
+            transform: translate(0, -80%);
+        }
+        @media (max-width: $md7) {
+            position: relative;
+            top: auto;
+            transform: translate(0, 0);
+        }
+    }
+    &__title {
+        padding: 0 0 25px 0;
+        max-width: 593px;
+        @media (max-width: $md7) {
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__title-text {
+        font-family: 'Forum', serif;
+        font-size: 80px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 90px;
+        letter-spacing: 5px;
+        color: #fff;
+        text-transform: uppercase;
+        @media (max-width: $md5) {
+            font-size: 50px;
+        }
+        @media (max-width: $md7) {
+            font-size: 40px;
+            line-height: 60px;
+            text-align: center;
+            max-width: 328px;
+        }
+        @media (max-width: 420px) {
+            font-size: 28px;
+            line-height: 40px;
+        }
+    }
+
+    &__subtitle {
+        padding: 0 0 75px 0;
+        @media (max-width: $md7) {
+            padding: 0 0 50px 0;
+        }
+    }
+
+    &__subtitle-text {
+        font-family: 'Roboto', sans-serif;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 33px;
+        letter-spacing: 2px;
+        color: #fff;
+        @media (max-width: $md5) {
+            font-size: 24px;
+            line-height: 28px;
+        }
+        @media (max-width: $md7) {
+            font-size: 20px;
+            line-height: 23px;
+            text-align: center;
+        }
+        @media (max-width:420px) {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+
+    &__discover-button {
+        @media (max-width: $md7) {
+            display: none;
+        }
+    }
+
+    &__discover-link {
+        padding: 32px 64px;
+        display: block;
+        font-family: 'Roboto', sans-serif;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 26px;
+        letter-spacing: 2px;
+        text-align: center;
+        background: $red;
+        color: #fff;
+        border-radius: 10px;
+        max-width: 360px;
+        transition: 400ms;
+        &:hover {
+            background: $gold;
+        }
+        @media (max-width: $md5) {
+            font-size: 20px;
+            line-height: 23px;
+            padding: 25px 45px;
+        }
+    }
+    &__slider {
+        margin-left: 0;
+        margin-right: 0;
+        position: relative;
+        overflow: hidden;
+        list-style: none;
+        padding: 0;
+        z-index: 1;
+    }
+
+    &__slider-wrapper {
+    }
+
+    &__slider-slide {
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__slider-image {
+        position: relative;
+        max-width: 1000px;
+        @media (max-width: $md5) {
+            max-width: 700px;
+        }
+        @media (max-width: $md7) {
+            max-width: 100%;
+        }
+        img {
+            width: 100%;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            left: -1px;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%);
+            @media (max-width: $md7) {
+                display: none;
+            }
+        }
+    }
+    &__slider-controlls-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        z-index: 1;
+        bottom: 60px;
+        @media (max-width: $md7) {
+            bottom: 0;
+        }
+    }
+    &__slider-controlls {
+        height: 120px;
+        display: flex;
+        align-items: center;
+        width: 600px;
+        background: $dark;
+        @media (max-width: $md5) {
+            width: 700px;
+        }
+        @media (max-width: $md7) {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    &__slider-pagination {
+        position: relative;
+        margin: 0 45px 0 0;
+        @media (max-width: 420px) {
+            margin: 0 25px 0 0;
+        }
+        .swiper-pagination-bullet {
+            height: 16px;
+            width: 16px;
+            background: #fff;
+            border-radius: 0;
+            opacity: 1;
+            &:not(:last-child) {
+                margin: 0 25px 0 0;
+            }
+            @media (max-width: $md5) {
+                width: 12px;
+                height: 12px;
+            }
+            @media (max-width: 420px) {
+                width: 7px;
+                height: 7px;
+                &:not(:last-child) {
+                    margin: 0 10px 0 0;
+                }
+            }
+        }
+        .swiper-pagination-bullet-active {
+            background: #D2B183;
+        }
+    }
+    &__slider-arrows {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    &__slider-prev {
+        position: static;
+        top: auto;
+        width: auto;
+        height: 10px;
+        margin-top: 0;
+        z-index: 10;
+        cursor: pointer;
+        margin: 0 20px 0 0;
+        @media (max-width: 420px) {
+            height: 4px;
+            margin: 0 15px 0 0;
+        }
+    }
+    &__slider-next {
+        position: static;
+        top: auto;
+        width: auto;
+        height: 10px;
+        margin-top: 0;
+        z-index: 10;
+        cursor: pointer;
+        @media (max-width: 420px) {
+            height: 4px;
+        }
+    }
+    &__slider-numbers {
+        color: #fff;
+        margin: 0 45px 0 70px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px;
+        @media (max-width: $md5) {
+            margin: 0 45px 0 230px;
+            font-size: 20px;
+        }
+        @media (max-width: $md7) {
+            margin: 0 45px 0 0;
+        }
+        @media (max-width: 420px) {
+            font-size: 16px;
+            margin: 0 25px 0 0;
+        }
+    }
+}
+
+.slide-number {
+    display: none;
+}
+
+
+
