@@ -1,10 +1,5 @@
 .visiting {
     background: #fff;
-    &__title {
-    }
-
-    &__title-text {
-    }
 
     &__row {
         display: flex;
@@ -65,6 +60,11 @@
             .visiting__column-title-text {
                 color: rgba(157, 134, 101, 1);
             }
+            .visiting__column-title {
+                &::after {
+                    width: 100%;
+                }
+            }
         }
     }
 
@@ -86,6 +86,7 @@
             width: 300px;
             height: 2px;
             background: $red;
+            transition: 400ms;
             @media (max-width: $md5) {
                 width: 150px;
             }
@@ -152,9 +153,6 @@
         }
     }
 
-    &__column-google {
-    }
-
     &__column-google-text {
         font-family: 'Roboto', sans-serif;
         font-size: 18px;
@@ -169,20 +167,4 @@
             line-height: 19px;
         }
     }
-}
-.section {
-
-    &__title {
-
-        &_light {
-        }
-    }
-
-    &__title-text {
-
-        &_light {
-        }
-    }
-}
-.container {
 }

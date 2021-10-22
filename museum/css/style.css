@@ -524,6 +524,10 @@ body._lock {
   color: #9d8665;
 }
 
+.visiting__column-link:hover .visiting__column-title::after {
+  width: 100%;
+}
+
 .visiting__column-image {
   margin: 0 0 25px 0;
   overflow: hidden;
@@ -547,6 +551,9 @@ body._lock {
   width: 300px;
   height: 2px;
   background: #710707;
+  -webkit-transition: 400ms;
+  -o-transition: 400ms;
+  transition: 400ms;
 }
 
 .visiting__column-title-text {
