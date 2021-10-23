@@ -1,4 +1,4 @@
-const swiper = new Swiper('.swiper', {
+const welcomeSwiper = new Swiper('.welcome__slider', {
     speed: 400,
     spaceBetween: 100,
     slidesPerView: 1,
@@ -13,7 +13,7 @@ const swiper = new Swiper('.swiper', {
     loop: true,
 });
 
-swiper.on('slideChangeTransitionStart', function () {
+welcomeSwiper.on('slideChangeTransitionStart', function () {
     let parent = document.querySelector('.swiper-slide-active');
     let child = parent.querySelector('.slide-number').innerHTML;
     document.querySelector('.welcome__slider-current').innerHTML = child;

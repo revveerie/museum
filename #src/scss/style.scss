@@ -64,19 +64,6 @@ body {
 	padding: 0 15px;
 	margin: 0 auto;
 }
-//GENERAL STYLES
-//-----------------------------------------------------
-
-
-//-----------------------------------------------------
-//STYLES
-@import "header";
-@import "welcome";
-@import "visiting";
-@import "explore";
-@import "footer";
-//STYLES
-//-----------------------------------------------------
 
 .link {
 	transition: 400ms;
@@ -163,6 +150,20 @@ body {
 .section__title-text_dark {
 	color: #fff;
 }
+//GENERAL STYLES
+//-----------------------------------------------------
+
+
+//-----------------------------------------------------
+//STYLES
+@import "header";
+@import "welcome";
+@import "visiting";
+@import "explore";
+@import "video";
+@import "footer";
+//STYLES
+//-----------------------------------------------------
 
 //-----------------------------------------------------
 //MAIN BLOCK
