@@ -1055,6 +1055,72 @@ input[type=range]::-moz-range-track {
   display: block;
 }
 
+.gallery {
+  background: #030303;
+  height: 2200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 300px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(3, 3, 3, 0)), color-stop(62%, rgba(3, 3, 3, 0.851716)), color-stop(75%, #030303));
+  background: -o-linear-gradient(top, rgba(3, 3, 3, 0) 0, rgba(3, 3, 3, 0.851716) 62%, #030303 75%);
+  background: linear-gradient(180deg, rgba(3, 3, 3, 0) 0, rgba(3, 3, 3, 0.851716) 62%, #030303 75%);
+}
+
+.gallery__title::after {
+  display: none;
+}
+
+.gallery__title-text {
+  padding: 0;
+}
+
+.gallery__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gallery__column:not(:last-child) {
+  margin: 0 35px 0 0;
+}
+
+.gallery__column_padding {
+  padding: 50px 0 0 0;
+}
+
+.gallery__item {
+  -webkit-transform: translate(0, 120%);
+      -ms-transform: translate(0, 120%);
+          transform: translate(0, 120%);
+  opacity: 0;
+  -webkit-transition: 400ms;
+  -o-transition: 400ms;
+  transition: 400ms;
+}
+
+.gallery__item:not(:last-child) {
+  margin: 0 0 25px 0;
+}
+
+.gallery__item img {
+  width: 100%;
+}
+
+.gallery__item._active {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+}
+
 @media (max-width: 1400px) {
   .explore__row {
     -webkit-box-orient: vertical;
@@ -1365,6 +1431,10 @@ input[type=range]::-moz-range-track {
     width: 152px;
     height: 152px;
   }
+
+  .gallery {
+    height: 1446px;
+  }
 }
 
 @media (max-width: 1024px) and (max-width: 768px) {
@@ -1589,6 +1659,18 @@ input[type=range]::-moz-range-track {
     width: 80px;
     height: 80px;
   }
+
+  .gallery {
+    height: 1220px;
+  }
+
+  .gallery__column:nth-child(2) {
+    margin: 0;
+  }
+
+  .gallery__column:last-child {
+    display: none;
+  }
 }
 
 @media (max-width: 736px) {
@@ -1728,6 +1810,10 @@ input[type=range]::-moz-range-track {
   .play-pause img {
     width: 50px;
     height: 50px;
+  }
+
+  .gallery {
+    height: 757px;
   }
 }
 

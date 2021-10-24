@@ -3,4 +3,4 @@
 @@include('scripts/welcome.js')
 @@include('scripts/explore.js')
 @@include('scripts/video.js')
-
+@@include('scripts/gallery.js')
