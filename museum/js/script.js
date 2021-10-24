@@ -91,6 +91,14 @@ const videoSlider = new Swiper('.video__slider', {
     speed: 400,
     slidesPerView: 1,
     loop: true,
+    navigation: {
+        nextEl: '.video__slider-next',
+        prevEl: '.video__slider-prev'
+    },
+    pagination: {
+        el: '.video__slider-pagination',
+        clickable: true,
+    },
     thumbs: {
         swiper: {
             el: '.video__slider-mini',
