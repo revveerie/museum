@@ -91,6 +91,20 @@ const videoSlider = new Swiper('.video__slider', {
     speed: 400,
     slidesPerView: 1,
     loop: true,
+    thumbs: {
+        swiper: {
+            el: '.video__slider-mini',
+            slidesPerView: 2,
+            loop: true,
+            spaceBetween: 30,
+            breakpoints: {
+                768: {
+                  slidesPerView: 3,
+                  spaceBetween: 40
+                }
+            }
+        }
+    }
 });
 
 let videoSlides = document.querySelectorAll('.video__slider-slide');

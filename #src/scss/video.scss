@@ -180,6 +180,37 @@
             width: 100%;
         }
     }
+    &__slider-mini {
+        margin: 40px 0 0 0;
+        @media(max-width: $md7) {
+            margin: 20px 0 0 0;
+        }
+        @media(max-width: 420px) {
+            margin: 40px 0 0 0;
+        }
+    }
+    &__slider-mini-slide {
+        &:not(:last-child) {
+            margin: 0 40px 0 0;
+            @media(max-width: $md7) {
+                margin: 0 20px 0 0;
+            }
+        }
+    }
+    &__wrapper {
+        iframe {
+            height: 254px;
+            @media(max-width: $md5) {
+                height: 170px;
+            }
+            @media(max-width: $md7) {
+                height: 199px;
+            }
+            @media(max-width: 420px) {
+                height: 101px;
+            }
+        }
+    }
 }
 .play {
 
