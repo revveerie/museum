@@ -4,3 +4,4 @@
 @@include('scripts/explore.js')
 @@include('scripts/video.js')
 @@include('scripts/gallery.js')
+@@include('scripts/ticket.js')
