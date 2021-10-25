@@ -1337,6 +1337,20 @@ input[type=radio]:checked + label:after {
   opacity: 1;
 }
 
+.parallax {
+  height: 400px;
+}
+
+.parallax__wrapper {
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/parallax.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
 @media (max-width: 1400px) {
   .explore__row {
     -webkit-box-orient: vertical;
@@ -1925,6 +1939,10 @@ input[type=radio]:checked + label:after {
   .ticket__total-item {
     margin: 0 0 40px 0;
   }
+
+  .parallax {
+    height: 300px;
+  }
 }
 
 @media (max-width: 736px) {
@@ -2171,7 +2189,7 @@ input[type=radio]:checked + label:after {
   }
 }
 @supports (-webkit-appearance:none){
-
+.parallax__wrapper{background-image:url(../img/parallax.webp)}
 }
 
  @media (max-width: 1400px){
