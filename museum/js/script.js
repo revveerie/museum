@@ -375,3 +375,5 @@ buttonOldPlus.onclick = function() {
     document.querySelector('.ticket__type-amount-input_65').textContent = oldAmount;
     document.querySelector('.ticket__total-item-text_output').textContent = totalOutput;
 }
+
+

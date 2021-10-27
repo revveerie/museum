@@ -5,3 +5,4 @@
 @@include('scripts/video.js')
 @@include('scripts/gallery.js')
 @@include('scripts/ticket.js')
+@@include('scripts/form.js')
