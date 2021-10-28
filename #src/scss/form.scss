@@ -258,7 +258,9 @@
 
     &__column {
         &:last-child {
-            display: none;
+            @media (max-width: 420px) {
+                display: none;
+            }
         }
     }
 
@@ -361,13 +363,21 @@
         }
     }
 
+    &__cost {
+        p {
+            width: 100%;
+            text-align: right;
+            font-family: 'Roboto', sans-serif;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 26px;
+            display: flex;
+            align-items: center;
+        }
+    }
+
     &__cost-18 {
-        width: 100%;
-        text-align: right;
-        font-family: 'Roboto', sans-serif;
-        font-size: 22px;
-        font-weight: 400;
-        line-height: 26px;
+        margin: 0 3px 0 0;
     }
 
     &__amount-65 {
@@ -384,12 +394,7 @@
     }
 
     &__cost-65 {
-        width: 100%;
-        text-align: right;
-        font-family: 'Roboto', sans-serif;
-        font-size: 22px;
-        font-weight: 400;
-        line-height: 26px;
+        margin: 0 3px 0 0;
     }
 
     &__result {
@@ -418,13 +423,14 @@
         line-height: 38px;
         padding: 10px 0 0 0;
     }
-
-    &__result-amount {
+    &__result-wrapper {
         font-family: 'Roboto', sans-serif;
         font-size: 32px;
         font-weight: 500;
         line-height: 38px;
         padding: 10px 0 0 0;
+    }
+    &__result-amount {
     }
 }
 .total {
