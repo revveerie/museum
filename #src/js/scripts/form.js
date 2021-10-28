@@ -138,3 +138,15 @@ selectInput.addEventListener('input', () => {
   formPrices.addEventListener('change', () => {
     radioPrices[+formPrices.value].click()
   })
+
+  let ticketButton = document.querySelector('.ticket__button');
+  ticketButton.onclick = function() {
+    document.querySelector('.form').classList.add('_open');
+    document.body.classList.add('_lock');
+}
+
+let closeForm = document.querySelector('.close-form');
+closeForm.onclick = function() {
+  document.querySelector('.form').classList.remove('_open');
+  document.body.classList.remove('_lock');
+}

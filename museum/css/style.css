@@ -166,6 +166,10 @@ body._lock {
   margin: 0 auto;
 }
 
+.container_m {
+  height: 100%;
+}
+
 .link {
   -webkit-transition: 400ms;
   -o-transition: 400ms;
@@ -1429,25 +1433,58 @@ input[type=radio]:checked + label:after {
 
 .form {
   background: #fff;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  -webkit-transition: 400ms;
+  -o-transition: 400ms;
+  transition: 400ms;
+  overflow: auto;
+  padding: 15px 0;
+  -webkit-transform: translate(-100%, 0);
+      -ms-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+  transition: 400ms;
+}
+
+.form._open {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.form__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .form__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
 }
 
 .form__column:first-child {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 40%;
-          flex: 0 1 40%;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
   margin: 0 40px 0 0;
 }
 
 .form__column:last-child {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 60%;
-          flex: 0 1 60%;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
 }
 
 .input {
@@ -2007,6 +2044,53 @@ input[type=radio]:checked + label:after {
           flex-direction: column;
 }
 
+.close-form {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+}
+
+.close-form span {
+  width: 30px;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  z-index: 1000;
+}
+
+.close-form span:first-child {
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.close-form span:last-child {
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.inputs__ticket-type {
+  background: #fff;
+}
+
+#date {
+  background: #fff;
+}
+
+#time {
+  background: #fff;
+}
+
 .footer {
   color: #fff;
 }
@@ -2185,6 +2269,25 @@ input[type=radio]:checked + label:after {
 
   .footer__nav-column:first-child {
     margin: 0 100px 0 0;
+  }
+}
+
+@media (max-width: 1090px) {
+  .form__wrapper {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+
+  .form__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .form__column:first-child {
+    margin: 0 0 20px 0;
   }
 }
 
@@ -2540,17 +2643,6 @@ input[type=radio]:checked + label:after {
 
   .contacts__map-wrapper iframe {
     height: 454px;
-  }
-
-  .form__row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
-  .form__column:first-child {
-    margin: 0 0 20px 0;
   }
 }
 
@@ -3287,6 +3379,14 @@ input[type=radio]:checked + label:after {
 }
 
  @media (max-width: 1145px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 1090px){
 
 @supports (-webkit-appearance:none){
 
