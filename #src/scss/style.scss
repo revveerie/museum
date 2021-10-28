@@ -63,6 +63,9 @@ body {
 	max-width: 1470px;
 	padding: 0 15px;
 	margin: 0 auto;
+	&_m {
+		height: 100%;
+	}
 }
 
 .link {
