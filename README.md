@@ -1,1 +1,1 @@
-Deploy: hhttps://revveerie.github.io/museum/museum/
+Deploy: https://revveerie.github.io/museum/museum/
